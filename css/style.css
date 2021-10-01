@@ -125,7 +125,14 @@ padding-bottom: 32px;
 }
 .header-tel-item + .header-tel-item {
   margin-left: 50px;
+
   /* ------почему не работает? */
+}
+.header-icon {
+  width: 16px;
+  height: 12px;
+  fill: var(--primary-text-color);
+  margin-right: 10px;
 }
 
 .header-tel-link {
@@ -137,7 +144,7 @@ padding-bottom: 32px;
 
 /* ---------------hero---------------------- */
 .hero {
-  background-image: linear-gradient(rgba(33, 40, 112, 0.4), rgba(49, 59, 160, 0.4)),
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../images/Img.jpg');
   background-repeat: no-repeat;
   background-position: center;
@@ -195,6 +202,19 @@ padding-bottom: 32px;
 .advantages-item:not(:last-child) {
   margin-right: 30px;
 }
+.advantages-icon-box {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  background-color: var(--backgrond-section-color);
+}
+.advantages-icon {
+  width: 70px;
+  height: 70px;
+}
 .advantages-skills {
   margin-top: 0;
   margin-bottom: 10px;
@@ -210,6 +230,7 @@ padding-bottom: 32px;
 
   color: var(--primary-text-color);
 }
+
 /* --------------work-------------------- */
 .work {
   padding-bottom: 94px;
@@ -234,6 +255,8 @@ padding-bottom: 32px;
   background-color: var(--backgrond-section-color);
   padding-top: 94px;
   padding-bottom: 94px;
+  max-width: 1600px;
+  margin: 0px auto;
 }
 .command-title {
   margin-top: 0;
@@ -303,20 +326,80 @@ padding-bottom: 32px;
   fill: var(--icon-color);
 }
 .social-link:hover,
-.social-link:focus{
+.social-link:focus {
   background-color: var(--accent-color);
 }
 
 .social-link:hover .sicial-icon,
-.social-link:focus .sicial-icon{
-  background-color: var(--white-color);
+.social-link:focus .sicial-icon {
+  /* background-color: var(--white-color); */
+  fill: var(--white-color);
+  /* ---------------------------не работает !!!!!!!!!!---------- */
+}
+/* -----------client------------ */
+.client {
+  padding: 94px 0;
+}
+.client-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  color: var(--dark-text-color);
+}
+.client-list {
+  display: flex;
+  justify-content: center;
+}
+
+.client-item:not(:last-child) {
+  margin-right: 30px;
+
+  /* ------------не понятный нижний отступ под иконками !!!-------------- */
+}
+
+.client-link {
+  width: 170px;
+  height: 92px;
+  display: block;
+  padding: 10px 32px;
+  border-radius: 3px;
+  border: 1px solid var(--icon-color);
+  /* ----------------в макете не нашел радиус бордера!!!!-------- */
+}
+
+.client-link:hover,
+.client-link:focus {
+  border-color: var(--accent-color);
+}
+
+.client-link:hover .client-icon,
+.client-link:focus .client-icon {
   fill: var(--accent-color);
 }
+
+.client-icon {
+  width: 106px;
+  height: 60px;
+  fill: var(--icon-color);
+}
+
 /* ---------------footer------------------ */
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--footer-color);
+}
+.footer-container {
+  display: flex;
+  justify-content: start;
+  /* align-items: center; */
+}
+.footer-left {
+  display: flex;
+  flex-direction: column;
 }
 .logo link {
 }
@@ -344,19 +427,36 @@ padding-bottom: 32px;
 
   color: var(--footer-connection-text-color);
 }
-.footer-title{
-font-weight: 700;
-font-size: 14px;
-line-height: 1.4;
-text-transform: uppercase;
-color: var(--white-color);
+.footer-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--white-color);
 }
 
-.footer-right{
-display: flex;
-
+.footer-right {
+  display: block;
+  flex-direction: column;
+  margin-top: 12px;
+  /* -----------------не уверен что сделал правильный отсуп марджином в секции футр у списка соц сетей  */
+  margin-left: 70px;
+  width: 206px;
 }
-
+.footer-text {
+  margin-bottom: 20px;
+  font-weight: 700px;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.footer-social-link {
+  background-color: #ffffff10;
+}
+.footer-sicial-icon {
+  fill: var(--white-color);
+}
 
 /* -----------portfolio--------------------- */
 /* -----------portfolio filter----------------- */
@@ -368,6 +468,7 @@ display: flex;
   margin-bottom: 50px;
   display: flex;
   justify-content: center;
+  
 }
 .filter-item:not(:last-child) {
   margin-right: 8px;
@@ -390,6 +491,7 @@ display: flex;
 .filter-btn:focus {
   color: var(--white-color);
   background-color: var(--accent-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 /* -----------works------------ */
 

@@ -37,11 +37,17 @@
 
           <ul class="header-tel-list list">
             <li class="header-tel-item">
-              <a class="header-tel-link link" href="mailto:info@example.com">info@example.com</a>
+              <a class="header-tel-link link" href="mailto:info@example.com">
+                <svg class="header-icon">
+              <use href="./images/symbol-defs.svg#icon-envelope"></use>
+            </svg>info@example.com</a>
             </li>
 
             <li class="header-tel-item">
-              <a class="header-tel-link link" href="tel:+380991111111">+38 099 111 11 11</a>
+              <a class="header-tel-link link" href="tel:+380991111111">
+                <svg class="header-icon">
+              <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+            </svg>+38 099 111 11 11</a>
             </li>
           </ul>
         </div>
@@ -215,8 +221,9 @@
     </main>
     <!-- footer -->
     <footer class="footer">
-      <div class="container">
-        <a href="/index.html" class="logo link">Web<span class="footer-logo">Studio</span></a>
+      <div class="container footer-container">
+        <div class="footer-left">
+          <a class="logo link" href="/index.html">Web<span class="footer-logo">Studio</span></a>
         <address class="footer-address">
           <ul class="footer-list list">
             <li class="footer-item">
@@ -229,14 +236,52 @@
               >
             </li>
             <li class="footer-item">
-              <a href="mailto:info@example.com" class="footer-link link">info@example.com</a>
+              <a class="footer-link link" href="mailto:info@example.com">info@example.com</a>
             </li>
 
             <li class="footer-item">
-              <a href="tel:+380991111111" class="footer-link link">+38 099 111 11 11</a>
+              <a class="footer-link link" href="tel:+380991111111">+38 099 111 11 11</a>
             </li>
           </ul>
         </address>
+        </div>
+
+        <div class="footer-right">
+          <h3 class="footer-text">присоединяйтесь</h3>
+          <ul class="footer-social-list social-list list">
+            <li class="social-item ">
+              <a class="social-link footer-social-link" href="">
+                <svg class="sicial-icon footer-sicial-icon">
+                  <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a class="social-link footer-social-link" href="">
+                <svg class="sicial-icon footer-sicial-icon">
+                  <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a class="social-link footer-social-link" href="">
+                <svg class="sicial-icon footer-sicial-icon">
+                  <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social-item">
+              <a class="social-link footer-social-link" href="">
+                <svg class="sicial-icon footer-sicial-icon">
+                  <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
   </body>
