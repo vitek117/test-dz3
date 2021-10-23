@@ -1,17 +1,13 @@
 /* ----------------header------------------- */
 .header {
-  /* margin-top: 0;
-  margin-bottom: 94px; */
   border-bottom: 1px solid var(--background-color);
   padding: 24px 0 25px;
 }
 .header-container {
-  display: flex;
-  align-items: center;
+  @extend %align-items;
 }
 .header-nav {
-  display: flex;
-  align-items: center;
+  @extend %align-items;
 }
 .header-logo {
   color: #000;
@@ -19,10 +15,11 @@
 }
 
 .header-link {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.02em;
+  // font-size: 14px;
+  // line-height: 1.14;
+  // font-weight: 500;
+  // letter-spacing: 0.02em;
+  @include font(14px, 1.14, 500, 00.02em);
   color: var(--dark-text-color);
   position: relative;
 }
@@ -45,8 +42,9 @@
   content: '';
   position: absolute;
   display: block;
-  width: 100%;
-  height: 4px;
+  // width: 100%;
+  // height: 4px;
+  @include width-height(100%, 4px);
   border-radius: 2px;
   background-color: var(--accent-color);
   bottom: -32px;
