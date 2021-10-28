@@ -1,6 +1,11 @@
 /* -----------client------------ */
 .client {
-  padding: 94px 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .client-title {
   margin-top: 0;
@@ -14,7 +19,17 @@
   color: var(--dark-text-color);
 }
 .client-list {
-  @extend %justify-content;
+  // @extend %justify-content;
+  // display: flex;
+  //   justify-content: center;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .client-item:not(:last-child) {
@@ -22,7 +37,8 @@
 }
 
 .client-link {
-  @extend %align-items;
+  display: flex;
+  align-items: center;
 
   justify-content: center;
 
@@ -43,7 +59,6 @@
     fill: var(--accent-color);
   }
 }
-
 
 .client-icon {
   // width: 106px;

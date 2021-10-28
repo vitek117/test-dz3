@@ -1,27 +1,55 @@
 /* --------------advantages-------------- */
 .advantages {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .advantages-list {
-  display: flex;
+  // display: flex;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    // margin-left: -30px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
+
 .advantages-item:not(:last-child) {
   margin-right: 30px;
 }
+
+.advantages-item {
+  width: 100%;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - 30px);
+    // margin-left: 30px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 4 - 30px);
+  }
+}
 .advantages-icon-box {
   margin-bottom: 30px;
-@extend %align-items;
+  @extend %align-items;
   justify-content: center;
-  // width: 270px;
-  // height: 120px;
-  @include width-height(270px, 120px);
+  width: 100%;
+  height: 120px;
+  // @include width-height(270px, 120px);
   background-color: var(--backgrond-section-color);
 }
 .advantages-icon {
   // width: 70px;
   // height: 70px;
-  @include width-height(70px, 70px)
+  @include width-height(70px, 70px);
 }
 .advantages-skills {
   margin-top: 0;
