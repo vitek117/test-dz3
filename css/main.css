@@ -186,42 +186,75 @@ img {
   bottom: -32px;
 }
 
-.header-tel-list {
-  display: inline-flex;
-  margin-left: auto;
+.header-contact {
+  display: flex;
 }
 
 @media screen and (max-width: 767px) {
-  .header-tel-list {
+  .header-contact {
     display: none;
   }
 }
 
-.header-tel-item + .header-tel-item {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header-contact {
+    flex-direction: column;
+    align-content: center;
+  }
+}
+
+.header-contack__list {
+  margin-left: auto;
+}
+
+.header-contact__item + .header-contact__item {
   margin-left: 50px;
 }
 
-.header-icon {
-  fill: currentColor;
-  margin-right: 10px;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header-contact__item + .header-contact__item {
+    margin-left: 0px;
+  }
 }
 
-.header-icon:hover, .header-icon:focus {
-  fill: var(--accent-color);
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header-contact__item {
+    margin-left: 0px;
+  }
 }
 
-.header-tel-link {
+.header-contact__link {
   display: inline-flex;
+  padding: 32px 0px 32px;
+  /* color: var(--secondary-text-color); */
+  align-items: center;
   font-weight: 500;
   font-size: 14px;
-  line-height: calc(16 / 14);
-  color: var(--primary-text-color);
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: #757575;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-tel-link:focus, .header-tel-link:hover {
+.header-contact__link:hover, .header-contact__link:focus {
   color: var(--accent-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header-contact__link {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header-contact__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.header-contact__icon {
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 .mob-menu {
@@ -468,7 +501,7 @@ img {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1199px) {
   .advantages-item {
     flex-basis: calc(100% / 4 - 30px);
   }
@@ -745,6 +778,8 @@ img {
   .footer {
     padding-top: 94px;
     padding-bottom: 94px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
