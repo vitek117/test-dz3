@@ -735,13 +735,53 @@ img {
   background-color: var(--footer-color);
 }
 
+@media screen and (max-width: 1199px) {
+  .footer {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
 .footer-container {
-  justify-content: start;
+  display: block;
+  margin: 0;
+  padding: 0px;
+}
+
+@media screen and (min-width: 767px) {
+  .footer-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px 165px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-container {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .footer-left {
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-left {
+    margin-bottom: 60px;
+  }
 }
 
 .footer-address {
@@ -792,6 +832,13 @@ img {
   flex-direction: column;
   margin-left: 70px;
   width: 206px;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-right {
+    margin: auto;
+    margin-bottom: 60px;
+  }
 }
 
 .footer-text {
@@ -1031,11 +1078,24 @@ img {
 /* ------------footer-form-------------*/
 .footer-form-box {
   display: block;
-  margin-left: 93px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-form-box {
+    margin-left: 93px;
+  }
 }
 
 .footer-form {
   display: flex;
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-form {
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .footer-form-input {
@@ -1068,6 +1128,13 @@ img {
 .footer-form-btn:hover .footer-form-icon,
 .footer-form-btn:focus .footer-form-icon {
   fill: var(--accent-color);
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-form-btn {
+    margin-left: 0;
+    margin-top: 20px;
+  }
 }
 
 .footer-form-icon {
@@ -1227,7 +1294,7 @@ img {
   margin: -1px;
 }
 
-.social-link, .header-container, .header-nav, .advantages-icon-box, .footer-container, .backdrop, .backdrop-close-btn, .footer-form-btn, .chek-text, .chek-text span {
+.social-link, .header-container, .header-nav, .advantages-icon-box, .backdrop, .backdrop-close-btn, .footer-form-btn, .chek-text, .chek-text span {
   display: flex;
   align-items: center;
 }

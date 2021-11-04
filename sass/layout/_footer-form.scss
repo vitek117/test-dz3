@@ -1,12 +1,22 @@
 /* ------------footer-form-------------*/
 .footer-form-box {
   display: block;
-  margin-left: 93px;
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
+  
+
 }
 .footer-form-text {
 }
 .footer-form {
   display: flex;
+  @media screen and (max-width: 1199px) {
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 .footer-form-input {
   // width: 358px;
@@ -29,6 +39,9 @@
     align-items: center;
     color: rgba(255, 255, 255, 0.6);
   }
+  // @media screen and (max-width: 767px) {
+  //   margin: auto;
+  // }
 }
 
 .footer-form-btn {
@@ -42,6 +55,11 @@
   &:focus .footer-form-icon {
     fill: var(--accent-color);
   }
+  @media screen and (max-width: 1199px) {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+ 
 }
 .footer-form-icon {
   fill: #ffffff;
