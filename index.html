@@ -19,7 +19,7 @@
   </head>
   <body>
     <!-- header -->
-    <!-- <header class="header">
+    <header class="header">
       <div class="container">
         <div class="header-container">
           <nav class="header-nav">
@@ -57,17 +57,54 @@
               </a>
             </li>
           </ul>
+          <button class="menu-open" data-menu-open>
+        <svg class="menu-burger" width="24" height="16">
+          <use href="./images/symbol-defs.svg#icon-burger"></use>
+        </svg>
+        </button>
+        
         </div>
       </div>
-    </header> -->
+            </div>
+      <div class="mob-menu flex is-hidden" data-menu>
+        <div>
+          <button class="menu-close" data-menu-close>
+            <svg class="menu-close" width="40" height="40">
+              <use href="./images/symbol-defs.svg#icon-close"></use>
+            </svg>
+          </button>
+          <ul class="mob-menu-list list">
+            <li class="mob-menu-list__item">
+              <a class="mob-menu-list__link link mob-menu-list__link--current" href="./index.html">Студия</a>
+            </li>
+            <li class="mob-menu-list__item">
+              <a class="mob-menu-list__link link" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="mob-menu-list__item">
+              <a class="mob-menu-list__link link" href="">Контакты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mob-menu-list__down">
+          <a class="mob-menu-list__tell link" href="tel:+380961111111">
+            +38 096 111 11 11</a>
+          <a class="mob-menu-list__mail link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          <ul class="mob-menu-list__social list">
+            <li class="mob-menu-list__social-item">Instagram</li>
+            <li class="mob-menu-list__social-item">Twitter</li>
+            <li class="mob-menu-list__social-item">Facebook</li>
+            <li class="mob-menu-list__social-item">LinkedIn</li>
+          </ul>
+        </div>
+    </header>
 
     <!-- main -->
     <main>
       <!-- hero-->
-      <!-- <section class="hero">
+      <section class="hero">
         <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
         <button type="button" class="hero-btn" data-modal-open>Заказать услугу</button>
-      </section> -->
+      </section>
 
       <!---advantages -->
       <section class="advantages container">
@@ -126,17 +163,25 @@
         <h2 class="work-title">Чем мы занимаемся</h2>
         <ul class="work-list list">
           <li class="work-item">
-            <img src="./images/box1.jpg" alt="работа на ПК" width="370" />
+            <img src="./img/img.jpg"
+            srcset="./img/img.jpg 1x, 
+            ./img/img-2x.jpg 2x"
+             alt="работа на ПК" width="370" />
             <p class="work-text">Десктопные приложения</p>
           </li>
 
           <li class="work-item">
-            <img src="./images/box2.jpg" alt="мобильное прилодение " width="370" />
+            <img src="./img/box.jpg" 
+            srcset="./img/box.jpg 1x, ./img/box-2x.jpg 2x"
+            alt="мобильное прилодение " width="370" />
             <p class="work-text">Мобильные приложения</p>
           </li>
 
           <li class="work-item">
-            <img src="./images/box3.jpg" alt="работа на планшете" width="370" />
+            <img src="./img/tv.jpg"
+            srcset="./img/tv.jpg 1x,
+            ./img/tv-2x.jpg 2x" 
+            alt="работа на планшете" width="370" />
             <p class="work-text">Дизайнерские решения</p>
           </li>
         </ul>
@@ -149,7 +194,16 @@
           <ul class="command-list list">
             <li class="command-item">
               <a href="" class="command-link">
-                <img src="./images/img1.jpg" alt="Игорь Демьяненко" width="270" />
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="./img/desktop-product-designer.jpg 1x, 
+                  ./img/desktop-product-designer-2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="./img/tablet-product-designer.jpg 1x, 
+                  ./img/tablet-product-designer-2x.jpg 2x">
+                  <source media="(min-width: 480px)" srcset="./img/mobile-product-designer.jpg 1x, 
+                  ./img/mobile-product-designer-2x.jpg 2x">
+                  <img src="./img/desktop-product-designer.jpg"
+                 alt="Игорь Демьяненко" width="270" />
+                </picture>
               </a>
               <div class="comand-tumb">
                 <h3 class="command-name">Игорь Демьяненко</h3>
@@ -188,7 +242,20 @@
             </li>
 
             <li class="command-item">
-              <a href="" class="command-link"><img src="./images/img2.jpg" alt="Ольга Репина" width="270" /></a>
+              <a href="" class="command-link">
+                <picture>
+                  <source media="(min-width: 1200px )" srcset="./img/desktop-frontend-developer.jpg 1x,
+                   ./img/desktop-frontend-developer-2x.jpg 2x">
+                   <source media="(min-width: 768px )" srcset="./img/tablet-frontend-developer.jpg 1x,
+                   ./img/tablet-frontend-developer-2x.jpg 2x">
+                   <source media="(min-width: 480px )" srcset="./img/mobile-frontend-developer.jpg 1x,
+                   ./img/mobile-frontend-developer-2x.jpg 2x">
+                  <img src="./img/desktop-frontend-developer.jpg" 
+                  alt="Ольга Репина" 
+                  width="270" />
+                </picture>
+                
+              </a>
               <div class="comand-tumb">
                 <h3 class="command-name">Ольга Репина</h3>
                 <p lang="en" class="command-text">Frontend Developer</p>
@@ -226,7 +293,17 @@
             </li>
 
             <li class="command-item">
-              <a href="" class="command-link"><img src="./images/img3.jpg" alt="Николай Тарасов" width="270" /></a>
+              <a href="" class="command-link">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="./img/desktop-marketing-1.jpg 1x,
+                  ./img/desktop-marketing-2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="./img/tablet-marketing.jpg 1x,
+                  ./img/tablet-marketing-2x.jpg 2x">
+                  <source media="(min-width: 480px)" srcset="./img/mobile-marketing.jpg 1x,
+                  ./img/mobile-marketing-2x.jpg 2x">
+                  <img src="./img/desktop-marketing-1.jpg" alt="Николай Тарасов" width="270" />
+                </picture>
+              </a>
               <div class="comand-tumb">
                 <h3 class="command-name">Николай Тарасов</h3>
                 <p lang="en" class="command-text">Marketing</p>
@@ -263,8 +340,22 @@
               </div>
             </li>
 
-            <li class="command-item">
-              <a href="" class="command-link"><img src="./images/img4.jpg" alt="Михаил Ермаков" width="270" /></a>
+            <li class="command-item">              
+                <a href="" class="command-link">
+                   <picture>
+                     <source media="(min-width: 1200px)" srcset="./img/desktop-ui-designer.jpg 1x,
+                     ./img/desktop-ui-designer-2x.jpg 2x">
+                     <source media="(min-width: 768px)" srcset="./img/tablet-ui-designer.jpg 1x,
+                     ./img/tablet-ui-designer-2x.jpg 2x">
+                     <source media="(min-width: 480px)" srcset="./img/mobile-ui-designer.jpg 1x,
+                     ./img/mobile-ui-designer-2x.jpg 2x">
+                  <img src="./img/desktop-ui-designer.jpg" 
+                  alt="Михаил Ермаков" 
+                  width="270" />
+                  </picture>
+                </a>
+                
+
               <div class="comand-tumb">
                 <h3 class="command-name">Михаил Ермаков</h3>
                 <p lang="en" class="command-text">UI Designer</p>
@@ -489,13 +580,15 @@
               <svg class="check-icon" width="11" height="8">
               <use href="./images/symbol-defs.svg#icon-chek">
               </use>
-            </svg>
+               </svg>
             </span> Соглашаюсь с рассылкой и принимаю  <a href="" class="checkbox-licens">  Условия договора</a></label>
           <button class="hero-btn modal-btn" type="submit">Отправить</button>
     </div>
+    
         </form>
-      </div>
+         </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
